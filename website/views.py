@@ -108,7 +108,7 @@ def update_record(request, pk):
             messages.success(request, "Record Updated.")
             return redirect("home")
 
-        return render(request, "update_record.html", {"form": form})
+        return render(request, "update_record.html", {"form": form, "pk": pk})
     else:
         messages.success(request, "Not Authenticated!")
         return redirect("home")
